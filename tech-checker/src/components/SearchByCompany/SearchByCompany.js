@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+import { nameToCheck } from '../.././ducks/techChecker'
 import { connect } from 'react-redux';
 
 class SearchByCompany extends Component {
+
+constructor() {
+    super();
+    this.state = {
+        inputValue: ''
+    }
+}
+
     render() {
         return (
             <div>
@@ -14,7 +23,7 @@ class SearchByCompany extends Component {
                         if (this.state.inputValue) {
                             this.props.nameToCheck(this.state.inputValue)
                             this.setState({
-                                inputValue:''
+                                inputValue:""
                             })
                         }}}>Check this Company name</button>
                 </form>
