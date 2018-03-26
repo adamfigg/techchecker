@@ -1,3 +1,4 @@
 import { createStore } from 'redux';
-import nameToCheck from './ducks/techChecker';
-export default createStore(nameToCheck);
+import checkName from './ducks/reducers';
+
+export default createStore(checkName);

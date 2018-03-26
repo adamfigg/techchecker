@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { nameToCheck } from '../.././ducks/techChecker'
 import { connect } from 'react-redux';
+import { checkName } from '../../ducks/actions'
+
+
 
 class SearchByCompany extends Component {
 
@@ -21,7 +23,7 @@ constructor() {
                            placeholder="Check by company name"></input>
                     <button onClick={(e)=> { e.preventDefault();
                         if (this.state.inputValue) {
-                            this.props.nameToCheck(this.state.inputValue)
+                            this.props.checkName(this.state.inputValue)
                             this.setState({
                                 inputValue:""
                             })
@@ -32,4 +34,4 @@ constructor() {
     }
 }
 
-export default connect(null, { nameToCheck })(SearchByCompany);
+export default connect(null, { checkName })(SearchByCompany);

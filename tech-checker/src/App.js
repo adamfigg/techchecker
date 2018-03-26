@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
-import { nameToCheck } from './ducks/techChecker.js'
+
 
 import SearchByCompany from './components/SearchByCompany/SearchByCompany.js';
-import SearchByTech from './components/SearchByTech/SearchByTech.js';
+// import SearchByTech from './components/SearchByTech/SearchByTech.js';
 
 
 
@@ -21,7 +21,7 @@ class App extends Component {
           <h3>Check the tech</h3>
           <div className="Components">
               <SearchByCompany />
-              <SearchByTech />
+              {/*<SearchByTech />*/}
           </div>
       </div>
 
